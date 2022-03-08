@@ -3,9 +3,9 @@ x = symbols('x')
 
 def cal(f, x0, step):
     g = x - f/diff(f,x)
-    return __cal(g, x0, step)
+    return _cal(g, x0, step)
 
-def __cal(g, x0, step):
+def _cal(g, x0, step):
     ans = [x0]
     for i in range(step):
         ans.append(g.subs(x, ans[i]))
