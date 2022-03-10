@@ -1,10 +1,10 @@
 import re
 
 def readEmail(email):
-    re_addr = re.compile(r'^<?([a-zA-z\s.]+)>?')
-    m = re_addr.match(email)
+    re_email = re.compile(r'([\w.]+)@([\w.]+)')
+    m = re_email.match(email)
     if m:
-        print('Right\n',m.group(1))
+        print('Right\n', m.groups())
     else:
         print('Wrong')
         

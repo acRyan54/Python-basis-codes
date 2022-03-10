@@ -1,4 +1,4 @@
-
+0. FIXME: Shift+Enter 直接copy到下方用python互动式命令行运行; Ctrl+Alt+N 在下方用cmd运行代码
 1. [python3中比较麻烦的import](https://zhuanlan.zhihu.com/p/63143493) 绝对引用和相对引用
 2. [递归与循环的改写](https://www.zhihu.com/question/20418254?sort=created)
 3. [输入一行数字的处理方法](https://blog.csdn.net/weixin_39613291/article/details/109872736)
