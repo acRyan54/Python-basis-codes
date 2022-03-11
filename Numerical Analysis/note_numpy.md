@@ -9,14 +9,14 @@
 
 ```[python]
 from sympy import *
-init_printing()
+init_printing(use_latex='mathjax')
 x, y = symbols('x y')
 x = symbols('x', positive = True, rational = True)
 sympify(str)
 expand(expr); factor(expr); simplify(expr); apart(expr); together(expr); expand_trig(expr_trig)
 latex(expr)
 s.eval()
-expr.evalf(subs = {(var1, value1), (var2, value2)})
+expr.evalf(subs = {var1:value1, var2:value2})
 expr.evalf(100)
 expr.subs([(var1, value1), (var2, value2)])
 数值计算N(expr.subs(xxxxxx))
@@ -42,7 +42,7 @@ m.T; m**(-1); m.det(); m.rref()
 m.eigenvals(); m.charpoly()  #注:.eigenvals()返回dict{lambda_i: times_i}对应特征值和次数
 p.all_coeffs()
 P, D = M.diagonalize()
-Expr = Sum(expr, (var, n_0, n_t));  Expr = Sum(expr, (var, n_0, n_t)); 
+Expr = Sum(expr, (var, n_0, n_t));  Expr = Product(expr, (var, n_0, n_t)); 
 Expr = Integral(expr, (var, x_0, x_t))
 Expr.doit()
 
