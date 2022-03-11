@@ -1,3 +1,7 @@
+# SymPy
+
+## 教程须知
+
 [官方教程](https://docs.sympy.org/latest/tutorial/calculus.html)
 [基本教程](https://www.cnblogs.com/zyg123/p/10539650.html)
 自主获取帮助：
@@ -6,6 +10,7 @@
 >>>help(p.all_coeffs)
 ```
 
+## 基本操作
 
 ```[python]
 from sympy import *
@@ -49,8 +54,7 @@ Expr.doit()
 
 ```
 
-
-
+### 示例
 
 
 ```
