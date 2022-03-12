@@ -9,3 +9,17 @@ print( random.randrange(1,100,2) )   # 生成从1到100的间隔为2的随机整
 a=[1,3,5,6,7]                # 将序列a中的元素顺序打乱
 random.shuffle(a)
 print(a)
+
+
+# 产生随机数列的方法:
+### 1
+import random
+random.sample(range(1, 100), 10)
+### 2
+import numpy as np  
+np.random.random(10) #生成array
+np.random.randint(0,10) #一个数
+np.random.randint(0,10, 8) #array
+### 3
+import numpy as np  
+x = np.random.randn(1000) # 正态分布

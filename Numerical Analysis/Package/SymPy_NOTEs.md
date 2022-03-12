@@ -25,7 +25,7 @@ expr.evalf(subs = {var1:value1, var2:value2})
 expr.evalf(100)
 expr.subs([(var1, value1), (var2, value2)])
 数值计算N(expr.subs(xxxxxx))
-func = lambdify(x, expr, "numpy")
+func = lambdify(x, expr, "numpy") 可以对于'numpy'里的数组进行操作
 diff(expr, var1, n1, var2, n2)
 integrate(expr, (var1, -oo, oo), (var2, -oo, oo))
 limit(expr, x, x_n); limit(expr, x, x_n, '+')
