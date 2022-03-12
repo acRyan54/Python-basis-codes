@@ -1,3 +1,4 @@
+#FixedPointIteration
 from sympy import *
 x = symbols('x')
 
@@ -9,7 +10,7 @@ def cal(g, x0, step):
 
 if __name__ == '__main__':
     g = sympify(input())
-    x0 = float(input())
-    step = int(input())
+    x0 = eval(input())
+    step = int(eval(input()))
     ans = cal(g, x0, step)
-    print(ans)
+    print(ans[len(ans)-1])

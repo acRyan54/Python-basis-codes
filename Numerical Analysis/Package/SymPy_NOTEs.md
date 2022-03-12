@@ -1,5 +1,7 @@
 # SymPy
 
+1. solve(expr, var) 能求解析解, 而nsolve(expr, var)能求精确数值解
+
 ## 教程须知
 
 [官方教程](https://docs.sympy.org/latest/tutorial/calculus.html)
