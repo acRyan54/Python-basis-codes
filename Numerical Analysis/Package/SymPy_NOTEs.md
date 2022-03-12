@@ -24,7 +24,7 @@ expand(expr); factor(expr); simplify(expr); apart(expr); together(expr); expand_
 latex(expr)
 s.eval()
 expr.evalf(subs = {var1:value1, var2:value2})
-expr.evalf(100)
+expr.evalf(n = 100)
 expr.subs([(var1, value1), (var2, value2)])
 数值计算N(expr.subs(xxxxxx))
 func = lambdify(x, expr, "numpy") 可以对于'numpy'里的数组进行操作

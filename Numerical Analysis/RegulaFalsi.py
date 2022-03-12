@@ -1,15 +1,15 @@
-#Bisection
+#Regula Falsi 试位法
 from sympy import *
 x = symbols('x')
 
 def func(f, var):
     return f.evalf(subs = {x: var}, n = 30)
 
-def cal(f, a, b, tol):
+def cal(f, a, b, step):
     fa = func(f, a)
     fb = func(f, b)
-    while (b - a) / 2 > tol:
-        c = (b + a) / 2
+    for i in range(step):
+        c = (b*fa - a*fb) / (fa - fb)
         fc = func(f, c)
         if fc == 0:
             return c
@@ -19,12 +19,13 @@ def cal(f, a, b, tol):
         else:
             a = c
             fa = fc
-    return (b + a) / 2
+    return (b*fa - a*fb) / (fa - fb)
+        
         
 
 if __name__ == '__main__':
     f = simplify(sympify(input()))
     a = eval(input())
     b = eval(input())
-    tol = eval(input())
-    print(cal(f, a, b, tol))
+    step = int(eval(input()))
+    print(cal(f, a, b, step))
