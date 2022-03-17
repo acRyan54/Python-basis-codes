@@ -29,5 +29,5 @@ if __name__ == '__main__':
         Y.append(eval(recv[1]))
     ans = cal(num, X, Y)
     print(ans)
-    print(sp.simplify(ans))
+    print(sp.expand(sp.simplify(ans)))
 
