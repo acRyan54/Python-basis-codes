@@ -1,6 +1,7 @@
 #Lagrange
 import numpy as np
 import sympy as sp
+from sympy.plotting import plot
 import re
 
 x = sp.symbols('x')
@@ -28,6 +29,6 @@ if __name__ == '__main__':
         X.append(eval(recv[0]))
         Y.append(eval(recv[1]))
     ans = cal(num, X, Y)
-    print(ans)
     print(sp.expand(sp.simplify(ans)))
+    plot(ans, (x, -10, 10))
 

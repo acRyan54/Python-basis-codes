@@ -1,6 +1,7 @@
-#Single
+#单项式
 import numpy as np
 import sympy as sp
+from sympy.plotting import plot
 import re
 
 x = sp.symbols('x')
@@ -34,4 +35,5 @@ if __name__ == '__main__':
         Y.append(eval(recv[1]))
     ans = cal(num, X, Y)
     print(ans)
+    plot(ans, (x, -10, 10))
 
