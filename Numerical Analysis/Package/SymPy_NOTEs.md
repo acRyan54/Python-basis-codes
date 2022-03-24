@@ -19,6 +19,7 @@ from sympy import *
 init_printing(use_latex='mathjax')
 x, y = symbols('x y')
 x = symbols('x', positive = True, rational = True)
+Rational(1, 2)
 sympify(str)
 expand(expr); factor(expr); simplify(expr); apart(expr); together(expr); expand_trig(expr_trig)
 latex(expr)
@@ -72,3 +73,12 @@ print(p)
 print(p.all_coeffs())
 factor(p)
 ```
+
+## 解方程
+https://blog.csdn.net/weixin_34352005/article/details/92949596
+https://docs.sympy.org/latest/tutorial/solvers.html
+
+solveset
+sovle n元1次方程
+linsolve 线性方程组
+nonlinsolve 非线性
