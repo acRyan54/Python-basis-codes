@@ -79,6 +79,23 @@ https://blog.csdn.net/weixin_34352005/article/details/92949596
 https://docs.sympy.org/latest/tutorial/solvers.html
 
 solveset
-sovle n元1次方程
+sovle 相比于solveset可以给出Lambert函数形式的解
+```
+from sympy import *
+x = symbols('x')
+print(solveset(x*exp(2*x) - 2, x))
+print(solve(x*exp(x) - 1, x, dict=True))
+```
 linsolve 线性方程组
 nonlinsolve 非线性
+roots 可以给出solveset（一定要多项式方程）中根的重数
+dsolve
+
+## 矩阵
+特征值Purepoly转换用.as_expr()
+```
+lamda = symbols('lamda')
+M = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])
+p = M.charpoly(lamda)
+factor(p.as_expr())
+```
