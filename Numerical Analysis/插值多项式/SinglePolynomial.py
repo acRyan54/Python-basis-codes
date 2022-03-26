@@ -24,13 +24,11 @@ def cal(n, X, Y):
         ans = ans + ai * x**i
     return ans
     
-    
-    
 if __name__ == '__main__':
     num = int(eval(input()))
     X, Y = [], []
     for i in range(num):
-        recv = re.split(r'[\s,]+', input())
+        recv = re.split(r'[\s,]+', input().strip())
         X.append(eval(recv[0]))
         Y.append(eval(recv[1]))
     ans = cal(num, X, Y)

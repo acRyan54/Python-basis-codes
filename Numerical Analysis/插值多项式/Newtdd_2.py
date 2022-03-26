@@ -2,9 +2,11 @@
 import sympy as sp
 from sympy.plotting import plot
 import re
+
 x = sp.symbols('x')
-f = {}
+
 def cal(n, X, Y, P_last):
+    f = {}
     f[(n, n)] = Y[n]
     if n == 0: #特判
         return f[(n, n)]
@@ -20,7 +22,7 @@ if __name__ == '__main__':
     P = 0
     num = int(eval(input()))
     for i in range(num):
-        recv = re.split(r'[\s,]+', input())
+        recv = re.split(r'[\s,]+', input().strip())
         X.append(eval(recv[0]))
         Y.append(eval(recv[1]))
         P = cal(i, X, Y, P)

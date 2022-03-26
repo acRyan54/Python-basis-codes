@@ -2,9 +2,11 @@
 import sympy as sp
 from sympy.plotting import plot
 import re
+
 x = sp.symbols('x')
-f = {}
+
 def cal(n, X, Y):
+    f = {}
     for i in range(n): #初始化
         f[(i, i)] = Y[i]
     for i in range(2, n + 1): #差商计算
@@ -22,7 +24,7 @@ if __name__ == '__main__':
     num = int(eval(input()))
     X, Y = [], []
     for i in range(num):
-        recv = re.split(r'[\s,]+', input())
+        recv = re.split(r'[\s,]+', input().strip())
         X.append(eval(recv[0]))
         Y.append(eval(recv[1]))
     ans = cal(num, X, Y)

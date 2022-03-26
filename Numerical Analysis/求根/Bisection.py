@@ -21,7 +21,6 @@ def cal(f, a, b, tol):
             fa = fc
     return (b + a) / 2
         
-
 if __name__ == '__main__':
     f = simplify(sympify(input()))
     a = eval(input())
